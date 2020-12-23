@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4 | Reiner Ng Wei Jie</title>
+    <link>https://reinerng.github.io/publication-type/4/</link>
+      <atom:link href="https://reinerng.github.io/publication-type/4/index.xml" rel="self" type="application/rss+xml" />
+    <description>4</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2020-2021</copyright><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://reinerng.github.io/media/static/img/index.jpg</url>
+      <title>4</title>
+      <link>https://reinerng.github.io/publication-type/4/</link>
+    </image>
+    
+    <item>
+      <title>When objective ambivalence leads to subjective ambivalence for health behaviors: An affect-cognition matching perspective</title>
+      <link>https://reinerng.github.io/publication/m_soc_sci_thesis/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://reinerng.github.io/publication/m_soc_sci_thesis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
