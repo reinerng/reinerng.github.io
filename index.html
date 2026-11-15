@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>(Wei Jie) Reiner Ng, Ph.D. — DSO National Laboratories</title>
-  
-  <meta name="description" content="Personal academic and professional website of (Wei Jie) Reiner Ng, Ph.D., Senior Member of Technical Staff at DSO National Laboratories and PhD graduate from the National University of Singapore.">
-  <meta property="og:title" content="(Wei Jie) Reiner Ng, Ph.D.">
-  <meta property="og:description" content="Senior Member of Technical Staff at DSO National Laboratories. Researching attitudes, persuasion, and decision ambivalence.">
-  <meta property="og:type" content="profile">
-  <link rel="canonical" href="https://reinerng.github.io/">
+  <meta name="description" content="Personal academic and professional website of (Wei Jie) Reiner Ng, Ph.D., Senior Member of Technical Staff at DSO National Laboratories." />
 
-  <!-- Apple System Font Stack with Inter Fallback -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,520 +17,389 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: [
-              '-apple-system',
-              'BlinkMacSystemFont',
-              '"SF Pro Text"',
-              '"SF Pro Display"',
-              'Inter',
-              'sans-serif'
-            ],
-            mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
           },
           colors: {
-            // Dark Mode Palette
-            canvasDark: '#0A0A0C',
-            cardDark: '#161618',
-            subtleDark: '#121214',
-            lineDark: '#28282B',
-            lineStrongDark: '#3A3A3C',
-            inkDark: '#F5F5F7',
-            secondaryDark: '#A1A1A6',
-            
-            // Light Mode Palette
-            canvasLight: '#F5F5F7',
-            cardLight: '#FFFFFF',
-            subtleLight: '#F0F0F2',
-            lineLight: '#E5E5EA',
-            lineStrongLight: '#D1D1D6',
-            inkLight: '#1D1D1F',
-            secondaryLight: '#6E6E73',
+            bgLight: '#FFFFFF',
+            subtleLight: '#F9FAFB',
+            inkLight: '#111827',
+            mutedLight: '#4B5563',
+            borderLight: '#E5E7EB',
+            accentLight: '#1D4ED8',
 
-            // Shared Accent
-            accent: '#0071E3',
-            accentDark: '#2997FF',
+            bgDark: '#0D1017',
+            subtleDark: '#141923',
+            inkDark: '#F3F4F6',
+            mutedDark: '#9CA3AF',
+            borderDark: '#222834',
+            accentDark: '#60A5FA',
           }
         }
       }
-    }
+    };
   </script>
   <style>
-    .glass-nav {
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-    }
-    .hover-lift {
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background-color 0.2s ease;
-    }
-    .hover-lift:hover {
-      transform: translateY(-1px);
+    body {
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     }
   </style>
-
-  <!-- Structured Metadata for Search & AI Engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Wei Jie Reiner Ng",
-    "alternateName": "Reiner Ng",
-    "jobTitle": "Senior Member of Technical Staff",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "DSO National Laboratories"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "National University of Singapore"
-    },
-    "url": "https://reinerng.github.io",
-    "sameAs": [
-      "https://github.com/reinerng",
-      "https://scholar.google.com/citations?user=EEWiCVkAAAAJ&hl=en",
-      "https://linkedin.com/in/reiner-ng-730717b5",
-      "https://osf.io/n3bsu/"
-    ]
-  }
-  </script>
 </head>
-<body class="bg-canvasLight dark:bg-canvasDark text-inkLight dark:text-inkDark font-sans antialiased selection:bg-blue-500/20 selection:text-blue-600 dark:selection:text-blue-200 min-h-screen transition-colors duration-200">
 
-  <!-- Apple Frosted Glass Top Header -->
-  <header class="sticky top-0 z-40 glass-nav bg-white/80 dark:bg-[#0A0A0C]/80 border-b border-lineLight dark:border-lineDark px-6 py-3.5 transition-colors duration-200">
-    <div class="max-w-3xl mx-auto flex justify-between items-center">
-      <div class="flex items-center gap-2.5">
-        <a href="#" class="text-[16px] font-semibold tracking-[-0.01em] text-inkLight dark:text-inkDark hover:text-accent dark:hover:text-accentDark transition-colors">Reiner Ng</a>
-        <span class="text-stone-400 dark:text-stone-600 text-xs hidden sm:inline">•</span>
-        <span class="text-xs text-secondaryLight dark:text-secondaryDark hidden sm:inline">DSO National Laboratories</span>
-      </div>
-      <div class="flex items-center gap-4 sm:gap-5 text-[13px] font-medium text-secondaryLight dark:text-secondaryDark">
-        <nav class="flex items-center gap-4 sm:gap-5">
-          <a href="#about" class="hover:text-inkLight dark:hover:text-inkDark transition-colors">About</a>
-          <a href="#publications" class="hover:text-inkLight dark:hover:text-inkDark transition-colors">Publications</a>
-          <a href="#experience" class="hover:text-inkLight dark:hover:text-inkDark transition-colors">Experience</a>
-          <a href="#education" class="hover:text-inkLight dark:hover:text-inkDark transition-colors">Education</a>
-          <a href="https://www.dropbox.com/s/03bfsjq9bwxtked/6_CV_Reiner%20Ng.docx?dl=0" target="_blank" class="text-accent dark:text-accentDark hover:underline font-semibold flex items-center gap-1">
-            CV
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-          </a>
-        </nav>
+<body class="bg-bgLight text-inkLight dark:bg-bgDark dark:text-inkDark font-sans transition-colors duration-150">
 
-        <!-- Light / Dark Theme Toggle Button -->
-        <button onclick="toggleTheme()" id="theme-toggle" aria-label="Toggle theme" class="p-1.5 rounded-lg border border-lineLight dark:border-lineDark bg-subtleLight dark:bg-subtleDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-inkLight dark:text-inkDark transition-colors">
-          <!-- Moon Icon (for Light Mode) -->
-          <svg id="theme-moon" class="w-4 h-4 hidden dark:inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-          <!-- Sun Icon (for Dark Mode) -->
-          <svg id="theme-sun" class="w-4 h-4 inline dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+  <!-- Top Navigation -->
+  <header class="border-b border-borderLight dark:border-borderDark sticky top-0 z-30 bg-bgLight/90 dark:bg-bgDark/90 backdrop-blur-md">
+    <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="#" class="font-semibold text-sm tracking-tight">(Wei Jie) Reiner Ng, Ph.D.</a>
+
+      <nav class="flex items-center gap-6 text-sm text-mutedLight dark:text-mutedDark">
+        <a href="#publications" class="hidden sm:inline hover:text-inkLight dark:hover:text-inkDark transition">Publications</a>
+        <a href="#experience" class="hidden sm:inline hover:text-inkLight dark:hover:text-inkDark transition">Experience</a>
+        <a href="#education" class="hidden sm:inline hover:text-inkLight dark:hover:text-inkDark transition">Education</a>
+        <a href="resume.pdf" target="_blank" class="font-medium text-accentLight dark:text-accentDark hover:underline">CV (PDF)</a>
+        <button id="themeToggle" aria-label="Toggle theme" class="px-2 py-1 rounded border border-borderLight dark:border-borderDark text-xs font-mono hover:border-inkLight dark:hover:border-inkDark transition">
+          <span class="dark:hidden">Dark</span>
+          <span class="hidden dark:inline">Light</span>
         </button>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <div class="max-w-3xl mx-auto px-6 py-12 sm:py-16 space-y-16">
+  <main class="max-w-4xl mx-auto px-6 py-12 space-y-14">
 
-    <!-- ================= HERO BIO SECTION ================= -->
-    <section id="about" class="bg-cardLight dark:bg-cardDark rounded-3xl p-7 sm:p-9 border border-lineLight dark:border-lineDark shadow-sm dark:shadow-2xl space-y-6 transition-colors duration-200">
-      <div class="flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start gap-8">
-        
-        <div class="space-y-4 max-w-xl text-center sm:text-left">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark text-[11px] font-medium">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Senior Member of Technical Staff at DSO National Laboratories
-          </div>
-          <h1 class="text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-inkLight dark:text-inkDark leading-snug">
-            (Wei Jie) Reiner NG, Ph.D.
-          </h1>
-          <p class="text-[15px] text-secondaryLight dark:text-secondaryDark leading-[1.65] font-normal">
-            I graduated with a <strong class="text-inkLight dark:text-inkDark font-semibold">Ph.D. in Social Psychology</strong> (Nov 2024) from the <strong class="text-inkLight dark:text-inkDark font-semibold">National University of Singapore</strong>. 
-            I study attitudes—specifically attitudinal strength—and how Large Language Models (LLMs) can be used to provide clarity on how these cognitive properties inform and guide downstream behaviors in humans and agents over time.
-          </p>
-          <p class="text-[14px] text-secondaryLight dark:text-secondaryDark leading-[1.65]">
-            My work combines experimental design, cross-sectional surveys, and social media data with advanced quantitative techniques including <span class="text-inkLight dark:text-inkDark font-medium">network analyses</span> and <span class="text-inkLight dark:text-inkDark font-medium">multilevel meta-analyses</span> in R.
-          </p>
-        </div>
-
-        <!-- Modern, Vibrant Portrait Framing (No Obituary Look) -->
-        <div class="shrink-0 relative group">
-          <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-3xl overflow-hidden border-2 border-white dark:border-lineStrongDark shadow-xl ring-4 ring-blue-500/10 dark:ring-accentDark/20 bg-stone-100 transition-transform duration-300 group-hover:scale-[1.02]">
-            <img src="authors/admin/avatar.jpg" alt="(Wei Jie) Reiner NG" class="w-full h-full object-cover">
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Verified Focus Area Pills & Contact Links -->
-      <div class="pt-4 border-t border-lineLight dark:border-lineDark flex flex-wrap items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-xs flex-wrap">
-          <span class="text-secondaryLight dark:text-tertiary text-[11px] uppercase tracking-wider font-mono">Focus:</span>
-          <span class="px-2.5 py-1 rounded-full bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark font-medium">Cross-Cultural Differences</span>
-          <span class="px-2.5 py-1 rounded-full bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark font-medium">Attitudinal Strength and Persuasion</span>
-          <span class="px-2.5 py-1 rounded-full bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark font-medium">Affective-Cognitive Messaging </span>
-        </div>
-
-        <div class="flex items-center gap-2 text-xs font-medium">
-          <a href="mailto:reinerngwj@gmail.com" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-inkLight dark:text-inkDark transition">Email</a>
-          <a href="https://scholar.google.com/citations?user=EEWiCVkAAAAJ&hl=en" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-inkLight dark:text-inkDark transition">Scholar</a>
-          <a href="https://github.com/reinerng" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-inkLight dark:text-inkDark transition">GitHub</a>
-          <a href="https://osf.io/n3bsu/" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-inkLight dark:text-inkDark transition">OSF</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= INTERACTIVE TOPIC FILTER ================= -->
-    <section class="space-y-3">
-      <div class="flex justify-between items-center">
-        <h2 class="text-xs font-semibold uppercase tracking-wider text-secondaryLight dark:text-tertiary">Filter by Research Area</h2>
-        <span class="text-xs text-secondaryLight dark:text-tertiary font-mono">Interactive view</span>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-4 gap-2.5">
-        <button onclick="filterWorks('all')" id="tab-all" class="p-3 rounded-2xl bg-cardLight dark:bg-cardDark border-2 border-accent dark:border-accentDark text-accent dark:text-accentDark font-semibold text-xs text-left shadow-xs transition hover-lift">
-          <span class="block text-inkLight dark:text-inkDark font-semibold">All Works</span>
-          <span class="text-[11px] text-secondaryLight dark:text-secondaryDark font-normal">3 Publications</span>
-        </button>
-
-        <button onclick="filterWorks('cross-cultural')" id="tab-cross-cultural" class="p-3 rounded-2xl bg-cardLight dark:bg-cardDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-secondaryLight dark:text-secondaryDark text-xs text-left shadow-xs transition hover-lift">
-          <span class="block text-inkLight dark:text-inkDark font-semibold">Cross-Cultural</span>
-          <span class="text-[11px] text-secondaryLight dark:text-secondaryDark font-normal">Messaging and Persuasion </span>
-        </button>
-
-        <button onclick="filterWorks('confidence')" id="tab-confidence" class="p-3 rounded-2xl bg-cardLight dark:bg-cardDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-secondaryLight dark:text-secondaryDark text-xs text-left shadow-xs transition hover-lift">
-          <span class="block text-inkLight dark:text-inkDark font-semibold">Attitudinal Strength</span>
-          <span class="text-[11px] text-secondaryLight dark:text-secondaryDark font-normal">Defensive Confidence</span>
-        </button>
-
-        <button onclick="filterWorks('ambivalence')" id="tab-ambivalence" class="p-3 rounded-2xl bg-cardLight dark:bg-cardDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-secondaryLight dark:text-secondaryDark text-xs text-left shadow-xs transition hover-lift">
-          <span class="block text-inkLight dark:text-inkDark font-semibold">Ambivalence </span>
-          <span class="text-[11px] text-secondaryLight dark:text-secondaryDark font-normal">Objective vs. Felt</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- ================= PUBLICATIONS ================= -->
-    <section id="publications" class="space-y-4">
-      <div class="flex justify-between items-baseline border-b border-lineLight dark:border-lineDark pb-3">
+    <!-- PROFILE HEADER -->
+    <section class="flex flex-col sm:flex-row gap-7 items-start">
+      <img
+        src="avatar.jpg"
+        alt="(Wei Jie) Reiner Ng, Ph.D."
+        class="w-28 h-28 sm:w-32 sm:h-32 rounded-lg object-cover border border-borderLight dark:border-borderDark shrink-0"
+      />
+      <div class="space-y-3">
         <div>
-          <h2 class="text-lg font-semibold tracking-[-0.01em] text-inkLight dark:text-inkDark">Publications</h2>
-          <p class="text-xs text-secondaryLight dark:text-secondaryDark mt-0.5">Peer-reviewed empirical studies and meta-analyses</p>
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">(Wei Jie) Reiner Ng, Ph.D.</h1>
+          <p class="text-sm sm:text-base text-mutedLight dark:text-mutedDark mt-1">
+            Senior Member of Technical Staff, <span class="text-inkLight dark:text-inkDark font-medium">DSO National Laboratories</span>
+          </p>
         </div>
-        <span id="works-count" class="text-xs font-mono text-secondaryLight dark:text-tertiary">Showing 3 works</span>
+
+        <p class="text-sm sm:text-[15px] leading-relaxed text-inkLight/90 dark:text-inkDark/90 max-w-2xl">
+          I graduated with a Ph.D. in Social Psychology (Nov 2024) from the National University of Singapore. My research examines attitudes—particularly attitudinal strength—and how Large Language Models (LLMs) can clarify how these cognitive properties inform downstream behaviors in humans and agents over time. I combine experimental design, cross-sectional surveys, and social media data with network analyses and multilevel meta-analyses in R.
+        </p>
+
+        <!-- Clean Scholar Links -->
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1 text-xs sm:text-sm font-medium">
+          <a href="mailto:reinerngwj@gmail.com" class="text-accentLight dark:text-accentDark hover:underline">Email</a>
+          <a href="https://scholar.google.com/citations?user=EEWiCVkAAAAJ&hl=en" target="_blank" rel="noopener" class="text-accentLight dark:text-accentDark hover:underline">Google Scholar</a>
+          <a href="https://osf.io/n3bsu/" target="_blank" rel="noopener" class="text-accentLight dark:text-accentDark hover:underline">OSF</a>
+          <a href="https://github.com/reinerng" target="_blank" rel="noopener" class="text-accentLight dark:text-accentDark hover:underline">GitHub</a>
+          <a href="resume.pdf" target="_blank" class="text-accentLight dark:text-accentDark hover:underline">Curriculum Vitae (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS (COMPACT) -->
+    <section class="border-t border-borderLight dark:border-borderDark pt-8">
+      <h2 class="text-xs font-mono uppercase tracking-wider text-mutedLight dark:text-mutedDark mb-4">Research Focus</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+        <div class="p-4 rounded-md bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark">
+          <div class="font-semibold">Attitudinal Strength</div>
+          <p class="text-xs text-mutedLight dark:text-mutedDark mt-1 leading-relaxed">
+            Objective vs. subjective ambivalence, attitude certainty, and defensive confidence.
+          </p>
+        </div>
+        <div class="p-4 rounded-md bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark">
+          <div class="font-semibold">Persuasion &amp; Culture</div>
+          <p class="text-xs text-mutedLight dark:text-mutedDark mt-1 leading-relaxed">
+            Affective–cognitive message matching across individualistic and collectivistic societies.
+          </p>
+        </div>
+        <div class="p-4 rounded-md bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark">
+          <div class="font-semibold">Computational Methods</div>
+          <p class="text-xs text-mutedLight dark:text-mutedDark mt-1 leading-relaxed">
+            Multilevel meta-analysis, network analysis, and LLM behavioral modeling in R.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="scroll-mt-20 border-t border-borderLight dark:border-borderDark pt-8 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <h2 class="text-xs font-mono uppercase tracking-wider text-mutedLight dark:text-mutedDark">Selected Publications</h2>
+
+        <div id="pubFilters" class="flex flex-wrap gap-1.5 text-xs">
+          <button data-filter="all" class="filter-btn px-2.5 py-1 rounded border border-inkLight bg-inkLight text-white dark:border-inkDark dark:bg-inkDark dark:text-bgDark font-medium transition">All (3)</button>
+          <button data-filter="meta" class="filter-btn px-2.5 py-1 rounded border border-borderLight dark:border-borderDark text-mutedLight dark:text-mutedDark hover:border-inkLight dark:hover:border-inkDark transition">Meta-Analysis</button>
+          <button data-filter="ambivalence" class="filter-btn px-2.5 py-1 rounded border border-borderLight dark:border-borderDark text-mutedLight dark:text-mutedDark hover:border-inkLight dark:hover:border-inkDark transition">Ambivalence</button>
+          <button data-filter="persuasion" class="filter-btn px-2.5 py-1 rounded border border-borderLight dark:border-borderDark text-mutedLight dark:text-mutedDark hover:border-inkLight dark:hover:border-inkDark transition">Persuasion</button>
+        </div>
       </div>
 
-      <div class="space-y-4" id="publications-container">
-
-        <!-- 1. JOC Meta Analysis (Cross-Cultural) -->
-        <article data-category="cross-cultural" class="work-card bg-cardLight dark:bg-cardDark rounded-2xl p-6 border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark transition-all shadow-xs space-y-3">
-          <div class="flex justify-between items-start gap-4">
-            <h3 class="text-[16px] font-semibold text-inkLight dark:text-inkDark leading-snug hover:text-accent dark:hover:text-accentDark transition-colors cursor-pointer" onclick="toggleAccordion('pub-1')">
-              The influence of affective and cognitive appeals on persuasion outcomes: A cross-cultural meta-analysis
-            </h3>
-            <span class="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/70 text-accent dark:text-accentDark border border-blue-200 dark:border-blue-800/60 text-[11px] font-mono font-medium shrink-0">JOC 2024</span>
+      <div class="divide-y divide-borderLight dark:divide-borderDark">
+        <!-- Paper 1 -->
+        <article data-tags="meta persuasion" class="pub-card py-5 first:pt-0 last:pb-0 space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-mutedLight dark:text-mutedDark">
+            <span>2024 · Journal of Communication (IF: 7.10)</span>
+            <span>133 samples · 22 countries</span>
           </div>
-
-          <p class="text-xs font-mono text-secondaryLight dark:text-secondaryDark">
-            <span class="text-inkLight dark:text-inkDark font-semibold">Wei Jie Reiner Ng</span>, Ya Hui Michelle See, Mike W.-L. Cheung
+          <h3 class="text-base sm:text-lg font-semibold leading-snug">
+            The influence of affective and cognitive appeals on persuasion outcomes: A cross-cultural meta-analysis
+          </h3>
+          <p class="text-sm text-mutedLight dark:text-mutedDark">
+            <span class="text-inkLight dark:text-inkDark font-medium">Wei Jie Reiner Ng</span>, Ya Hui Michelle See, Mike W.-L. Cheung
           </p>
-
-          <p class="text-[13px] text-secondaryLight dark:text-secondaryDark leading-relaxed">
-            Published in the <em class="text-inkLight dark:text-inkDark">Journal of Communication</em> (IF: 7.10). A cross-cultural meta-analytic synthesis assessing how cultural factors moderate the efficacy of affect- versus cognition-based persuasive messaging.
+          <p class="text-sm text-mutedLight dark:text-mutedDark leading-relaxed">
+            A cross-cultural meta-analytic synthesis assessing how cultural individualism–collectivism moderates the efficacy of affect- versus cognition-based persuasive messaging.
           </p>
-
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <a href="https://reinerng.github.io/publication/cross-cultural-meta/cross-cultural-meta.pdf" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">PDF ↗</a>
-            <a href="https://doi.org/10.1093/joc/jqae042" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">DOI ↗</a>
-            <button onclick="copyBibtex('bib-1')" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark hover:text-inkLight dark:hover:text-inkDark font-medium transition">Copy BibTeX</button>
-            <button onclick="toggleAccordion('pub-1')" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark hover:text-inkLight dark:hover:text-inkDark transition">Details</button>
+          <div class="flex flex-wrap items-center gap-2 pt-1 text-xs font-mono">
+            <a href="https://reinerng.github.io/publication/cross-cultural-meta/cross-cultural-meta.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">PDF</a>
+            <a href="https://doi.org/10.1093/joc/jqae042" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">DOI</a>
+            <button type="button" onclick="toggleDrawer(this, 'abs-1')" class="px-2.5 py-1 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">Abstract</button>
+            <button type="button" onclick="copyBibtex(this, 'bib-1')" class="px-2.5 py-1 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">BibTeX</button>
           </div>
-
-          <div id="pub-1" class="hidden pt-3 border-t border-lineLight dark:border-lineDark space-y-2 text-xs">
-            <pre id="bib-1" class="p-3.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark font-mono text-[11px] text-secondaryLight dark:text-secondaryDark overflow-x-auto leading-relaxed">@article{ng2024influence,
+          <div id="abs-1" class="hidden mt-3 p-3.5 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark text-xs sm:text-sm text-mutedLight dark:text-mutedDark leading-relaxed">
+            Using 133 samples across 22 countries (N = 29,338), we found affective appeals to be relatively more effective than cognitive appeals in collectivistic societies, whereas both appeals were similarly effective in individualistic societies.
+          </div>
+          <pre id="bib-1" class="hidden">@article{ng2024influence,
   title={The influence of affective and cognitive appeals on persuasion outcomes: A cross-cultural meta-analysis},
   author={Ng, Wei Jie Reiner and See, Ya Hui Michelle and Cheung, Mike W.-L.},
   journal={Journal of Communication},
   year={2024},
   doi={10.1093/joc/jqae042}
 }</pre>
-          </div>
         </article>
 
-        <!-- 2. PSPB Ambivalence (Objective vs. Subjective) -->
-        <article data-category="ambivalence" class="work-card bg-cardLight dark:bg-cardDark rounded-2xl p-6 border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark transition-all shadow-xs space-y-3">
-          <div class="flex justify-between items-start gap-4">
-            <h3 class="text-[16px] font-semibold text-inkLight dark:text-inkDark leading-snug hover:text-accent dark:hover:text-accentDark transition-colors cursor-pointer" onclick="toggleAccordion('pub-2')">
-              When objective ambivalence leads to subjective ambivalence: An affect-cognition matching perspective
-            </h3>
-            <span class="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/70 text-accent dark:text-accentDark border border-blue-200 dark:border-blue-800/60 text-[11px] font-mono font-medium shrink-0">PSPB 2022</span>
+        <!-- Paper 2 -->
+        <article data-tags="ambivalence persuasion" class="pub-card py-5 first:pt-0 last:pb-0 space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-mutedLight dark:text-mutedDark">
+            <span>2022 · Personality and Social Psychology Bulletin (IF: 4.38)</span>
+            <span>5 studies</span>
           </div>
-
-          <p class="text-xs font-mono text-secondaryLight dark:text-secondaryDark">
-            <span class="text-inkLight dark:text-inkDark font-semibold">Wei Jie Reiner Ng</span>, Ya Hui Michelle See, Laura E. Wallace
+          <h3 class="text-base sm:text-lg font-semibold leading-snug">
+            When objective ambivalence leads to subjective ambivalence: An affect-cognition matching perspective
+          </h3>
+          <p class="text-sm text-mutedLight dark:text-mutedDark">
+            <span class="text-inkLight dark:text-inkDark font-medium">Wei Jie Reiner Ng</span>, Ya Hui Michelle See, Laura E. Wallace
           </p>
-
-          <p class="text-[13px] text-secondaryLight dark:text-secondaryDark leading-relaxed">
-            Published in <em class="text-inkLight dark:text-inkDark">Personality and Social Psychology Bulletin</em> (IF: 4.38). Investigates when evaluative inconsistency between positive and negative attributes translates into introspective, experienced subjective ambivalence.
+          <p class="text-sm text-mutedLight dark:text-mutedDark leading-relaxed">
+            Investigates when evaluative inconsistency between positive and negative attributes translates into introspective, experienced subjective ambivalence.
           </p>
-
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <a href="https://reinerng.github.io/publication/objective-subjective-ambivalence/objective-subjective-ambivalence.pdf" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">PDF ↗</a>
-            <a href="https://osf.io/p8u5g/" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">Dataset (OSF) ↗</a>
-            <a href="https://doi.org/10.1177/01461672221102015" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">DOI ↗</a>
-            <button onclick="copyBibtex('bib-2')" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark hover:text-inkLight dark:hover:text-inkDark font-medium transition">Copy BibTeX</button>
-            <button onclick="toggleAccordion('pub-2')" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark hover:text-inkLight dark:hover:text-inkDark transition">Details</button>
+          <div class="flex flex-wrap items-center gap-2 pt-1 text-xs font-mono">
+            <a href="https://reinerng.github.io/publication/objective-subjective-ambivalence/objective-subjective-ambivalence.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">PDF</a>
+            <a href="https://osf.io/p8u5g/" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">Dataset (OSF)</a>
+            <a href="https://doi.org/10.1177/01461672221102015" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">DOI</a>
+            <button type="button" onclick="toggleDrawer(this, 'abs-2')" class="px-2.5 py-1 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">Abstract</button>
+            <button type="button" onclick="copyBibtex(this, 'bib-2')" class="px-2.5 py-1 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">BibTeX</button>
           </div>
-
-          <div id="pub-2" class="hidden pt-3 border-t border-lineLight dark:border-lineDark space-y-2 text-xs">
-            <pre id="bib-2" class="p-3.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark font-mono text-[11px] text-secondaryLight dark:text-secondaryDark overflow-x-auto leading-relaxed">@article{ng2022when,
+          <div id="abs-2" class="hidden mt-3 p-3.5 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark text-xs sm:text-sm text-mutedLight dark:text-mutedDark leading-relaxed">
+            Across five studies, greater objective–subjective ambivalence correspondence occurred with an affective–cognitive match between message and topic orientation—primarily when the message was counterattitudinal.
+          </div>
+          <pre id="bib-2" class="hidden">@article{ng2022when,
   title={When objective ambivalence leads to subjective ambivalence: An affect-cognition matching perspective},
   author={Ng, Wei Jie Reiner and See, Ya Hui Michelle and Wallace, Laura E.},
   journal={Personality and Social Psychology Bulletin},
   year={2022},
   doi={10.1177/01461672221102015}
 }</pre>
-          </div>
         </article>
 
-        <!-- 3. PSPB Defensive Confidence (Attitudinal Strength) -->
-        <article data-category="confidence" class="work-card bg-cardLight dark:bg-cardDark rounded-2xl p-6 border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark transition-all shadow-xs space-y-3">
-          <div class="flex justify-between items-start gap-4">
-            <h3 class="text-[16px] font-semibold text-inkLight dark:text-inkDark leading-snug hover:text-accent dark:hover:text-accentDark transition-colors cursor-pointer" onclick="toggleAccordion('pub-3')">
-              Defensive confidence and certainty in unchanged attitudes: The role of affect-cognition matching
-            </h3>
-            <span class="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/70 text-accent dark:text-accentDark border border-blue-200 dark:border-blue-800/60 text-[11px] font-mono font-medium shrink-0">PSPB 2022</span>
+        <!-- Paper 3 -->
+        <article data-tags="persuasion" class="pub-card py-5 first:pt-0 last:pb-0 space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-mutedLight dark:text-mutedDark">
+            <span>2022 · Personality and Social Psychology Bulletin</span>
+            <span>4 studies</span>
           </div>
-
-          <p class="text-xs font-mono text-secondaryLight dark:text-secondaryDark">
-            <span class="text-inkLight dark:text-inkDark font-semibold">Wei Jie Reiner Ng</span>, Chi Bu, Ya Hui Michelle See
+          <h3 class="text-base sm:text-lg font-semibold leading-snug">
+            Defensive confidence and certainty in unchanged attitudes: The role of affect-cognition matching
+          </h3>
+          <p class="text-sm text-mutedLight dark:text-mutedDark">
+            <span class="text-inkLight dark:text-inkDark font-medium">Wei Jie Reiner Ng</span>, Chi Bu, Ya Hui Michelle See
           </p>
-
-          <p class="text-[13px] text-secondaryLight dark:text-secondaryDark leading-relaxed">
-            Published in <em class="text-inkLight dark:text-inkDark">Personality and Social Psychology Bulletin</em>. Examines how matching persuasive appeals to underlying affective vs. cognitive attitude bases affects defensive confidence and attitude certainty after resisting persuasion.
+          <p class="text-sm text-mutedLight dark:text-mutedDark leading-relaxed">
+            Examines how matching persuasive appeals to underlying affective vs. cognitive attitude bases affects defensive confidence and attitude certainty after resisting persuasion.
           </p>
-
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <a href="https://reinerng.github.io/publication/defensive-confidence/defensive-confidence.pdf" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">PDF ↗</a>
-            <a href="https://osf.io/n6h3f/" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">Dataset (OSF) ↗</a>
-            <a href="https://doi.org/10.1177/01461672221074102" target="_blank" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-inkLight dark:text-inkDark font-medium transition">DOI ↗</a>
-            <button onclick="copyBibtex('bib-3')" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark hover:text-inkLight dark:hover:text-inkDark font-medium transition">Copy BibTeX</button>
-            <button onclick="toggleAccordion('pub-3')" class="px-3 py-1.5 rounded-xl bg-subtleLight dark:bg-subtleDark hover:bg-stone-200 dark:hover:bg-cardDark border border-lineLight dark:border-lineDark text-secondaryLight dark:text-secondaryDark hover:text-inkLight dark:hover:text-inkDark transition">Details</button>
+          <div class="flex flex-wrap items-center gap-2 pt-1 text-xs font-mono">
+            <a href="https://reinerng.github.io/publication/defensive-confidence/defensive-confidence.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">PDF</a>
+            <a href="https://osf.io/n6h3f/" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">Dataset (OSF)</a>
+            <a href="https://doi.org/10.1177/01461672221074102" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">DOI</a>
+            <button type="button" onclick="toggleDrawer(this, 'abs-3')" class="px-2.5 py-1 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">Abstract</button>
+            <button type="button" onclick="copyBibtex(this, 'bib-3')" class="px-2.5 py-1 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark hover:border-accentLight dark:hover:border-accentDark transition">BibTeX</button>
           </div>
-
-          <div id="pub-3" class="hidden pt-3 border-t border-lineLight dark:border-lineDark space-y-2 text-xs">
-            <pre id="bib-3" class="p-3.5 rounded-xl bg-subtleLight dark:bg-subtleDark border border-lineLight dark:border-lineDark font-mono text-[11px] text-secondaryLight dark:text-secondaryDark overflow-x-auto leading-relaxed">@article{ng2022defensive,
+          <div id="abs-3" class="hidden mt-3 p-3.5 rounded bg-subtleLight dark:bg-subtleDark border border-borderLight dark:border-borderDark text-xs sm:text-sm text-mutedLight dark:text-mutedDark leading-relaxed">
+            Unlike a matched attack, an attack mismatched to the affective–cognitive orientation of attitudes results in low defensive confidence individuals holding onto unchanged attitudes with less certainty than high defensive confidence individuals, mediated by perceived knowledge.
+          </div>
+          <pre id="bib-3" class="hidden">@article{ng2022defensive,
   title={Defensive confidence and certainty in unchanged attitudes: The role of affect-cognition matching},
   author={Ng, Wei Jie Reiner and Bu, Chi and See, Ya Hui Michelle},
   journal={Personality and Social Psychology Bulletin},
   year={2022},
   doi={10.1177/01461672221074102}
 }</pre>
-          </div>
         </article>
-
       </div>
     </section>
 
-    <!-- ================= EXPERIENCE ================= -->
-    <section id="experience" class="bg-cardLight dark:bg-cardDark rounded-3xl p-7 sm:p-9 border border-lineLight dark:border-lineDark shadow-xs space-y-6 transition-colors duration-200">
-      <h2 class="text-lg font-semibold tracking-[-0.01em] text-inkLight dark:text-inkDark border-b border-lineLight dark:border-lineDark pb-3">Selected Experiences</h2>
-      
-      <div class="space-y-6 relative before:absolute before:left-2 before:top-3 before:bottom-3 before:w-0.5 before:bg-lineLight dark:before:bg-lineDark">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="scroll-mt-20 border-t border-borderLight dark:border-borderDark pt-8 space-y-6">
+      <h2 class="text-xs font-mono uppercase tracking-wider text-mutedLight dark:text-mutedDark">Experience</h2>
 
-        <!-- Role 1 -->
-        <div class="relative pl-7 space-y-1">
-          <span class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-cardLight dark:bg-subtleDark border-2 border-accent dark:border-accentDark"></span>
-          <div class="flex justify-between items-baseline text-sm">
-            <h3 class="font-semibold text-inkLight dark:text-inkDark">Senior Member of Technical Staff</h3>
-            <span class="font-mono text-xs text-secondaryLight dark:text-secondaryDark">Nov 2024 – Present</span>
+      <div class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+          <div class="sm:col-span-3 font-mono text-xs text-mutedLight dark:text-mutedDark pt-0.5">Nov 2024 – Present</div>
+          <div class="sm:col-span-9">
+            <div class="font-semibold text-sm sm:text-base">Senior Member of Technical Staff</div>
+            <div class="text-xs sm:text-sm text-accentLight dark:text-accentDark font-medium">DSO National Laboratories</div>
+            <p class="text-sm text-mutedLight dark:text-mutedDark mt-1.5 leading-relaxed">
+              Sensemake behavioral patterns at intrapersonal, interpersonal, and group levels using quantitative and computational methods. Develop and test research approaches, analytical pipelines, and coding frameworks.
+            </p>
           </div>
-          <p class="text-xs text-accent dark:text-accentDark font-medium">DSO National Laboratories</p>
-          <ul class="text-[13px] text-secondaryLight dark:text-secondaryDark list-disc list-inside space-y-1 pt-1 leading-relaxed">
-            <li>Sensemake behavioral patterns at various levels of analysis (intrapersonal, interpersonal, group) using quantitative and computational methods.</li>
-            <li>Develop and test research approaches, analytical pipelines, and coding frameworks.</li>
-          </ul>
         </div>
 
-        <!-- Role 2 -->
-        <div class="relative pl-7 space-y-1">
-          <span class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-cardLight dark:bg-subtleDark border-2 border-lineStrongLight dark:border-lineStrongDark"></span>
-          <div class="flex justify-between items-baseline text-sm">
-            <h3 class="font-semibold text-inkLight dark:text-inkDark">Research Manager</h3>
-            <span class="font-mono text-xs text-secondaryLight dark:text-secondaryDark">May 2022 – Jul 2023</span>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+          <div class="sm:col-span-3 font-mono text-xs text-mutedLight dark:text-mutedDark pt-0.5">May 2022 – Jul 2023</div>
+          <div class="sm:col-span-9">
+            <div class="font-semibold text-sm sm:text-base">Research Manager</div>
+            <div class="text-xs sm:text-sm text-mutedLight dark:text-mutedDark font-medium">NUS Business School</div>
+            <p class="text-sm text-mutedLight dark:text-mutedDark mt-1.5 leading-relaxed">
+              Managed research projects and research group initiatives for Asst. Profs. Karsten Muller, Fazio Dimas, and Ben Charoenwong.
+            </p>
           </div>
-          <p class="text-xs text-secondaryLight dark:text-secondaryDark font-medium">NUS Business School</p>
-          <p class="text-[13px] text-secondaryLight dark:text-secondaryDark leading-relaxed">
-            Managed research projects and research group initiatives for Asst. Profs. Karsten Muller, Fazio Dimas, and Ben Charoenwong.
-          </p>
         </div>
 
-        <!-- Role 3 -->
-        <div class="relative pl-7 space-y-1">
-          <span class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-cardLight dark:bg-subtleDark border-2 border-lineStrongLight dark:border-lineStrongDark"></span>
-          <div class="flex justify-between items-baseline text-sm">
-            <h3 class="font-semibold text-inkLight dark:text-inkDark">Graduate Lab Member & Lab Manager</h3>
-            <span class="font-mono text-xs text-secondaryLight dark:text-secondaryDark">Aug 2021 – Oct 2024</span>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+          <div class="sm:col-span-3 font-mono text-xs text-mutedLight dark:text-mutedDark pt-0.5">Aug 2021 – Oct 2024</div>
+          <div class="sm:col-span-9">
+            <div class="font-semibold text-sm sm:text-base">Graduate Lab Member &amp; Lab Manager</div>
+            <div class="text-xs sm:text-sm text-mutedLight dark:text-mutedDark font-medium">Group for Persuasion and Evaluative Processes (Director: Assoc. Prof. Michelle See)</div>
+            <p class="text-sm text-mutedLight dark:text-mutedDark mt-1.5 leading-relaxed">
+              Oversaw data collection, cleaning, and modeling (SPSS, R) across attitudinal ambivalence studies. Chaired bi-weekly meetings and mentored Honours and independent research students.
+            </p>
           </div>
-          <p class="text-xs text-secondaryLight dark:text-secondaryDark font-medium">Group for Persuasion and Evaluative Processes (Director: Assoc. Prof. Michelle See)</p>
-          <p class="text-[13px] text-secondaryLight dark:text-secondaryDark leading-relaxed">
-            Oversaw data collection, cleaning, and modeling (SPSS, R) across attitudinal ambivalence studies. Chaired bi-weekly meetings and mentored Honours and independent research students.
-          </p>
         </div>
 
-        <!-- Role 4 -->
-        <div class="relative pl-7 space-y-1">
-          <span class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-cardLight dark:bg-subtleDark border-2 border-lineStrongLight dark:border-lineStrongDark"></span>
-          <div class="flex justify-between items-baseline text-sm">
-            <h3 class="font-semibold text-inkLight dark:text-inkDark">Teaching Assistant</h3>
-            <span class="font-mono text-xs text-secondaryLight dark:text-secondaryDark">Aug 2021 – Oct 2024</span>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+          <div class="sm:col-span-3 font-mono text-xs text-mutedLight dark:text-mutedDark pt-0.5">Aug 2021 – Oct 2024</div>
+          <div class="sm:col-span-9">
+            <div class="font-semibold text-sm sm:text-base">Teaching Assistant</div>
+            <div class="text-xs sm:text-sm text-mutedLight dark:text-mutedDark font-medium">National University of Singapore (Department of Psychology)</div>
+            <p class="text-sm text-mutedLight dark:text-mutedDark mt-1.5 leading-relaxed">
+              Taught Statistics and Research Methods I &amp; II (PL2131 &amp; PL2132); advised undergraduate cohorts on empirical research design.
+            </p>
           </div>
-          <p class="text-xs text-secondaryLight dark:text-secondaryDark font-medium">National University of Singapore (Department of Psychology)</p>
-          <p class="text-[13px] text-secondaryLight dark:text-secondaryDark leading-relaxed">
-            Taught Statistics and Research Methods I & II (PL2131 & PL2132); advised undergraduate cohorts on empirical research design.
-          </p>
         </div>
-
       </div>
     </section>
 
-    <!-- ================= EDUCATION & AWARDS ================= -->
-    <section id="education" class="grid sm:grid-cols-2 gap-6">
-
-      <!-- Education -->
-      <div class="bg-cardLight dark:bg-cardDark rounded-3xl p-6 border border-lineLight dark:border-lineDark shadow-xs space-y-4 transition-colors duration-200">
-        <h2 class="text-[15px] font-semibold text-inkLight dark:text-inkDark border-b border-lineLight dark:border-lineDark pb-2.5">Education</h2>
-        <div class="space-y-4 text-xs">
-          <div class="space-y-0.5">
-            <div class="flex justify-between items-baseline">
-              <span class="font-semibold text-inkLight dark:text-inkDark text-[13px]">Ph.D. in Psychology</span>
-              <span class="font-mono text-secondaryLight dark:text-secondaryDark">Nov 2024</span>
+    <!-- EDUCATION & HONORS -->
+    <section id="education" class="scroll-mt-20 border-t border-borderLight dark:border-borderDark pt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="space-y-4">
+        <h2 class="text-xs font-mono uppercase tracking-wider text-mutedLight dark:text-mutedDark">Education</h2>
+        <ul class="space-y-3 text-sm">
+          <li class="flex justify-between gap-4">
+            <div>
+              <div class="font-semibold">Ph.D. in Psychology</div>
+              <div class="text-xs text-mutedLight dark:text-mutedDark">National University of Singapore</div>
             </div>
-            <p class="text-secondaryLight dark:text-secondaryDark">National University of Singapore</p>
-          </div>
-          <div class="space-y-0.5">
-            <div class="flex justify-between items-baseline">
-              <span class="font-semibold text-inkLight dark:text-inkDark text-[13px]">M.Soc.Sci. in Psychology</span>
-              <span class="font-mono text-secondaryLight dark:text-secondaryDark">Dec 2020</span>
+            <span class="font-mono text-xs text-mutedLight dark:text-mutedDark shrink-0">Nov 2024</span>
+          </li>
+          <li class="flex justify-between gap-4">
+            <div>
+              <div class="font-semibold">M.Soc.Sci. in Psychology</div>
+              <div class="text-xs text-mutedLight dark:text-mutedDark">National University of Singapore</div>
             </div>
-            <p class="text-secondaryLight dark:text-secondaryDark">National University of Singapore</p>
-          </div>
-          <div class="space-y-0.5">
-            <div class="flex justify-between items-baseline">
-              <span class="font-semibold text-inkLight dark:text-inkDark text-[13px]">B.Soc.Sci. (Hons, Highest Distinction)</span>
-              <span class="font-mono text-secondaryLight dark:text-secondaryDark">Dec 2020</span>
+            <span class="font-mono text-xs text-mutedLight dark:text-mutedDark shrink-0">Dec 2020</span>
+          </li>
+          <li class="flex justify-between gap-4">
+            <div>
+              <div class="font-semibold">B.Soc.Sci. (Hons, Highest Distinction)</div>
+              <div class="text-xs text-mutedLight dark:text-mutedDark">National University of Singapore</div>
             </div>
-            <p class="text-secondaryLight dark:text-secondaryDark">National University of Singapore</p>
-          </div>
-        </div>
+            <span class="font-mono text-xs text-mutedLight dark:text-mutedDark shrink-0">Dec 2020</span>
+          </li>
+        </ul>
       </div>
 
-      <!-- Awards & Fellowships -->
-      <div id="awards" class="bg-cardLight dark:bg-cardDark rounded-3xl p-6 border border-lineLight dark:border-lineDark shadow-xs space-y-4 transition-colors duration-200">
-        <h2 class="text-[15px] font-semibold text-inkLight dark:text-inkDark border-b border-lineLight dark:border-lineDark pb-2.5">Honors & Fellowships</h2>
-        <div class="space-y-3.5 text-xs">
-          <div class="space-y-0.5">
-            <div class="flex justify-between font-semibold text-inkLight dark:text-inkDark">
-              <span class="text-[13px]">Dean PhD Fellowship</span>
-              <span class="font-mono text-secondaryLight dark:text-secondaryDark font-normal">2021 – 2024</span>
+      <div class="space-y-4">
+        <h2 class="text-xs font-mono uppercase tracking-wider text-mutedLight dark:text-mutedDark">Honors &amp; Fellowships</h2>
+        <ul class="space-y-3 text-sm">
+          <li class="flex justify-between gap-4">
+            <div>
+              <div class="font-semibold">Dean PhD Fellowship</div>
+              <div class="text-xs text-mutedLight dark:text-mutedDark">Faculty of Arts and Social Sciences, NUS</div>
             </div>
-            <p class="text-secondaryLight dark:text-secondaryDark">Faculty of Arts and Social Sciences, NUS</p>
-          </div>
-          <div class="space-y-0.5">
-            <div class="flex justify-between font-semibold text-inkLight dark:text-inkDark">
-              <span class="text-[13px]">NUS Research Scholarship</span>
-              <span class="font-mono text-secondaryLight dark:text-secondaryDark font-normal">2021 – 2024</span>
+            <span class="font-mono text-xs text-mutedLight dark:text-mutedDark shrink-0">2021–2024</span>
+          </li>
+          <li class="flex justify-between gap-4">
+            <div>
+              <div class="font-semibold">NUS Research Scholarship</div>
+              <div class="text-xs text-mutedLight dark:text-mutedDark">National University of Singapore</div>
             </div>
-            <p class="text-secondaryLight dark:text-secondaryDark">National University of Singapore</p>
-          </div>
-          <div class="space-y-0.5">
-            <div class="flex justify-between font-semibold text-inkLight dark:text-inkDark">
-              <span class="text-[13px]">Dean’s Scholar List & Dean’s List</span>
-              <span class="font-mono text-secondaryLight dark:text-secondaryDark font-normal">2018 – 2019</span>
+            <span class="font-mono text-xs text-mutedLight dark:text-mutedDark shrink-0">2021–2024</span>
+          </li>
+          <li class="flex justify-between gap-4">
+            <div>
+              <div class="font-semibold">Dean’s Scholar List &amp; Dean’s List</div>
+              <div class="text-xs text-mutedLight dark:text-mutedDark">Top 1% and 5% of academic cohort, NUS</div>
             </div>
-            <p class="text-secondaryLight dark:text-secondaryDark">Top 1% and 5% of academic cohort at NUS</p>
-          </div>
-        </div>
+            <span class="font-mono text-xs text-mutedLight dark:text-mutedDark shrink-0">2018–2019</span>
+          </li>
+        </ul>
       </div>
-
     </section>
 
-  </div>
-
-  <!-- Toast for BibTeX copy -->
-  <div id="toast" class="fixed bottom-6 right-6 bg-stone-900 dark:bg-[#2C2C2E] border border-stone-700 dark:border-lineStrongDark text-white dark:text-inkDark text-xs font-mono px-3.5 py-2 rounded-xl shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none">
-    BibTeX citation copied to clipboard
-  </div>
-
-  <!-- Footer -->
-  <footer class="max-w-3xl mx-auto px-6 pb-12 pt-6 flex justify-between items-center text-xs font-mono text-secondaryLight dark:text-tertiary border-t border-lineLight dark:border-lineDark">
-    <span>© 2026 (Wei Jie) Reiner Ng • DSO National Laboratories</span>
-    <span>GitHub Pages</span>
-  </footer>
+    <footer class="border-t border-borderLight dark:border-borderDark pt-6 flex flex-wrap justify-between gap-4 text-xs text-mutedLight dark:text-mutedDark font-mono">
+      <span>© 2026 (Wei Jie) Reiner Ng, Ph.D.</span>
+      <span>reinerng.github.io</span>
+    </footer>
+  </main>
 
   <script>
-    // Theme Management (Dark Mode default)
-    function initTheme() {
-      const stored = localStorage.getItem('theme');
-      if (stored === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
     }
-    initTheme();
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
 
-    function toggleTheme() {
-      const isDark = document.documentElement.classList.contains('dark');
-      if (isDark) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    }
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const pubCards = document.querySelectorAll('.pub-card');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterButtons.forEach(b => {
+          b.className = 'filter-btn px-2.5 py-1 rounded border border-borderLight dark:border-borderDark text-mutedLight dark:text-mutedDark hover:border-inkLight dark:hover:border-inkDark transition';
+        });
+        btn.className = 'filter-btn px-2.5 py-1 rounded border border-inkLight bg-inkLight text-white dark:border-inkDark dark:bg-inkDark dark:text-bgDark font-medium transition';
 
-    // Accordion Toggle
-    function toggleAccordion(id) {
+        pubCards.forEach(card => {
+          const tags = card.dataset.tags || '';
+          card.classList.toggle('hidden', filter !== 'all' && !tags.includes(filter));
+        });
+      });
+    });
+
+    function toggleDrawer(btn, id) {
       const el = document.getElementById(id);
+      if (!el) return;
+      const isHidden = el.classList.contains('hidden');
       el.classList.toggle('hidden');
+      btn.textContent = isHidden ? 'Hide Abstract' : 'Abstract';
     }
 
-    // Filter Works by Focus Area
-    function filterWorks(category) {
-      const cards = document.querySelectorAll('.work-card');
-      let count = 0;
-
-      const activeClass = "p-3 rounded-2xl bg-cardLight dark:bg-cardDark border-2 border-accent dark:border-accentDark text-accent dark:text-accentDark font-semibold text-xs text-left shadow-xs transition hover-lift";
-      const inactiveClass = "p-3 rounded-2xl bg-cardLight dark:bg-cardDark border border-lineLight dark:border-lineDark hover:border-lineStrongLight dark:hover:border-lineStrongDark text-secondaryLight dark:text-secondaryDark text-xs text-left shadow-xs transition hover-lift";
-
-      ['all', 'cross-cultural', 'confidence', 'ambivalence'].forEach(c => {
-        const btn = document.getElementById('tab-' + c);
-        if (c === category) {
-          btn.className = activeClass;
-        } else {
-          btn.className = inactiveClass;
-        }
+    function copyBibtex(btn, id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+        const prev = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = prev; }, 1500);
       });
-
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.classList.remove('hidden');
-          count++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-
-      document.getElementById('works-count').innerText = `Showing ${count} ${count === 1 ? 'work' : 'works'}`;
-    }
-
-    // Copy BibTeX Toast
-    function copyBibtex(id) {
-      const text = document.getElementById(id).innerText;
-      navigator.clipboard.writeText(text);
-      const toast = document.getElementById('toast');
-      toast.style.opacity = '1';
-      setTimeout(() => { toast.style.opacity = '0'; }, 2000);
     }
   </script>
-
 </body>
 </html>
