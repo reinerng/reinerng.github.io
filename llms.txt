@@ -1,0 +1,45 @@
+# (Wei Jie) Reiner Ng, Ph.D.
+
+> Senior Member of Technical Staff at DSO National Laboratories. Ph.D. in Social Psychology (National University of Singapore, Nov 2024). Research examines attitudinal strength (objective vs. subjective ambivalence, attitude certainty, defensive confidence), affective–cognitive persuasion across cultures, multilevel meta-analysis, network analysis, and Large Language Model (LLM) behavioral modeling in R.
+
+- Website: https://reinerng.github.io/
+- Email: mailto:reinerngwj@gmail.com
+- Google Scholar: https://scholar.google.com/citations?user=EEWiCVkAAAAJ&hl=en
+- OSF: https://osf.io/n3bsu/
+- GitHub: https://github.com/reinerng
+
+## Publications
+
+### The influence of affective and cognitive appeals on persuasion outcomes: A cross-cultural meta-analysis (2024)
+- Authors: Wei Jie Reiner Ng, Ya Hui Michelle See, Mike W.-L. Cheung
+- Journal: Journal of Communication
+- DOI: https://doi.org/10.1093/joc/jqae042
+- Page: https://reinerng.github.io/publication/cross-cultural-meta/
+- PDF: https://reinerng.github.io/publication/cross-cultural-meta/cross-cultural-meta.pdf
+- Key finding: Using 133 samples across 22 countries (N = 29,338), affective appeals were relatively more effective than cognitive appeals in collectivistic societies, whereas both appeals were similarly effective in individualistic societies.
+
+### When objective ambivalence leads to subjective ambivalence: An affect-cognition matching perspective (2022)
+- Authors: Wei Jie Reiner Ng, Ya Hui Michelle See, Laura E. Wallace
+- Journal: Personality and Social Psychology Bulletin
+- DOI: https://doi.org/10.1177/01461672221102015
+- Page: https://reinerng.github.io/publication/objective-subjective-ambivalence/
+- PDF: https://reinerng.github.io/publication/objective-subjective-ambivalence/objective-subjective-ambivalence.pdf
+- Dataset (OSF): https://osf.io/p8u5g/
+- Key finding: Across five studies, greater objective–subjective ambivalence correspondence occurred with an affective–cognitive match between message and topic orientation—primarily when the message was counterattitudinal.
+
+### Defensive confidence and certainty in unchanged attitudes: The role of affect-cognition matching (2022)
+- Authors: Wei Jie Reiner Ng, Chi Bu, Ya Hui Michelle See
+- Journal: Personality and Social Psychology Bulletin
+- DOI: https://doi.org/10.1177/01461672221074102
+- Page: https://reinerng.github.io/publication/defensive-confidence/
+- PDF: https://reinerng.github.io/publication/defensive-confidence/defensive-confidence.pdf
+- Dataset (OSF): https://osf.io/n6h3f/
+- Key finding: Unlike a matched attack, an attack mismatched to the affective–cognitive orientation of attitudes results in low defensive confidence individuals holding onto unchanged attitudes with less certainty than high defensive confidence individuals, mediated by perceived knowledge.
+
+### The interactive influence of individuals’ initial attitudes and affective-cognitive persuasion on fruits and vegetables consumption (2020)
+- Authors: Wei Jie Reiner Ng, Ya Hui Michelle See
+- Venue: Society for Personality and Social Psychology Annual Meeting, New Orleans, 2020 (Poster)
+- Page: https://reinerng.github.io/publication/interactive-influence/
+- PDF: https://reinerng.github.io/publication/interactive-influence/interactive-influence.pdf
+- Poster (OSF): https://osf.io/jgync/
+- Key finding: For individuals with less positive initial attitudes toward fruits and vegetables, focusing on emotions rather than beliefs led to greater consumption intentions, whereas affective–cognitive focus did not matter for those with more positive initial attitudes.
